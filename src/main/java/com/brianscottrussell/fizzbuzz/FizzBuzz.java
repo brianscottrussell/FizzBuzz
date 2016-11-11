@@ -5,26 +5,37 @@ package com.brianscottrussell.fizzbuzz;
  * The source code is owned by Brian Scott Russell and is protected by copyright
  * laws and international copyright treaties, as well as other intellectual
  * property laws and treaties.
- * $RCSfile: $
  */
 
 /**
+ * This program is a rendering of Stage 1 of the FizzBuzz Kata found here:
+ *  http://codingdojo.org/cgi-bin/index.pl?KataFizzBuzz
+ *
+ * Summary
+ * Write a program that prints the numbers from 1 to 100. But for multiples of three print "Fizz" instead of the
+ *  number and for the multiples of five print "Buzz". For numbers which are multiples of both three and five
+ *  print "FizzBuzz?".
+ *
  * @author brussell
  */
 public class FizzBuzz {
 
     public static void main(String[] args) {
-        runFizzBuzz();
+        // We're going to count to 100 for this game
+        runFizzBuzz(100);
     }
 
     /**
-     * Write a program that prints the numbers from 1 to 100. But for multiples of three print "Fizz" instead of the
-     *  number and for the multiples of five print "Buzz". For numbers which are multiples of both three and five
-     *  print "FizzBuzz?".
+     * Simply runs the FizzBuzz routine starting at 1 and ending at totalCount
+     *
+     * @param totalCount the number we will be counting up to
      */
-    private static void runFizzBuzz() {
-        for(int i=1; i<=100; i++) {
-            System.out.println(doFizzBuzz(i));
+    private static void runFizzBuzz(int totalCount) {
+        if(totalCount <= 0) {
+            System.out.println("We need at least one participant to play FizzBuzz!");
+        }
+        for (int i = 1; i <= totalCount; i++) {
+            System.out.println(fizzBuzzNumber(i));
         }
     }
 
@@ -40,7 +51,7 @@ public class FizzBuzz {
      * @param number int as the number to which to apply FizzBuzz rules
      * @return String as the representation of the number according to FizzBuzz rules
      */
-    public static String doFizzBuzz(int number) {
+    public static String fizzBuzzNumber(int number) {
         if(number % 3 == 0 && number % 5 == 0) {
             return "FizzBuzz";
         }

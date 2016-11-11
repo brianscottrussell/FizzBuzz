@@ -18,23 +18,23 @@ public class FizzBuzzTest {
 
     @Test
     public void testWhenDivisibleByThree() {
-        Assert.assertEquals("Fizz", FizzBuzz.doFizzBuzz(3));
+        Assert.assertEquals("Fizz", FizzBuzz.fizzBuzzNumber(3));
     }
 
     @Test
     public void testWhenDivisibleByFive() {
-        Assert.assertEquals("Buzz", FizzBuzz.doFizzBuzz(5));
+        Assert.assertEquals("Buzz", FizzBuzz.fizzBuzzNumber(5));
     }
 
     @Test
     public void testWhenDivisibleByThreeAndFive() {
-        Assert.assertEquals("FizzBuzz", FizzBuzz.doFizzBuzz(15));
+        Assert.assertEquals("FizzBuzz", FizzBuzz.fizzBuzzNumber(15));
     }
 
     @Test
     public void testWhenNotDivisibleByThreeOrFive() {
-        Assert.assertEquals("1", FizzBuzz.doFizzBuzz(1));
-        Assert.assertEquals("11", FizzBuzz.doFizzBuzz(11));
-        Assert.assertEquals("37", FizzBuzz.doFizzBuzz(37));
+        Assert.assertEquals("1", FizzBuzz.fizzBuzzNumber(1));
+        Assert.assertEquals("11", FizzBuzz.fizzBuzzNumber(11));
+        Assert.assertEquals("37", FizzBuzz.fizzBuzzNumber(37));
     }
 }
