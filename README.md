@@ -1,4 +1,6 @@
 # FizzBuzz
+Solution for Stage 1 of the FizzBuzz Kata: http://codingdojo.org/cgi-bin/index.pl?KataFizzBuzz
+
 The following instructions assume that Java 8 and Maven 3.3+ is available from the command line.
 
 ##Running Test Cases
